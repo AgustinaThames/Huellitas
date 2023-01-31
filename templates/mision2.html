@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<body>
+  {% block content %}
+    <div class="container2">
+      <div class="rectangulo">
+            <div calss="mision">
+              <br>
+              <h2>Nuestra Misión</h2>
+            </div>
+      </div>
+      <div class="rectangulo2">
+        <li><img class="imgMision" src="{{ url_for('static', filename='img/iconoPersonas.png') }}"></li>
+        <li class="cruzTexto">Somos un refugio de animales, que tiene como objetivo rescatar y rehabilitar para luego reincorporar y disponer en adopción a aquellos perros y gatos abandonados o maltratados .</li>
+        <li><img class="imgMision" src="{{ url_for('static', filename='img/iconoCruz.png') }}"></li> 
+        <li class="cruzTexto"> Brindamos lugares seguros y salubres para aquellos felinos y caninos en situación de calle. Nuestro deseo es ofrecerles un refugio momentaneo hasta que una familia decida ser su refugio permamente.</li>  
+        <li><img class="imgMision" src="{{ url_for('static', filename='img/iconoCasa.png') }}"></li>
+        <li class="cruzTexto"> Buscamos las mejores alternativas para que los animales se sientan como en su hogar y tengan una familia que los ame, los cuide y juege con ellos.</li>
+      </div>  
+    </div>
+  {% endblock content %}
+</body>
+
+
+
+ 

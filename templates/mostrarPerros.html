@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<body>
+  {% block content %}
+  
+  <div class="scroollAnimalitos">
+    <h1> <b>Conoce a nuestros Caninos! </b></h1>
+    <div class="tablaAnimalitos">
+      {% for linea in range (largo) %} 
+      <form action="{{url_for('mostrarPerros')}}" method="POST">
+        <div class= "cuadradoAnimalito" >
+          <img id="animal" class="imagenesAnimales" alt=" {{ perros[linea][1] }} " onclick="probarModal('{{ perros[linea][1] }}');  seleccionar('{{ imagenPerros[linea] }}')" src = "{{ imagenPerros[linea][1:] }}">
+          <h2 class="nombreMascota"style="
+    text-align: center "> {{ perros[linea][1] }} </h2>
+        </div>
+        <input type="hidden" name="perroSeleccionado" value="{{ imagenPerros[linea][1:] }}"
+      </form>
+    
+      <!-- Modal -->
+      <dialog class= "formPerfil" id="modal{{ perros[linea][1] }}">
+        <form method="dialog">
+          <p>
+            <label for="favAnimal">Perfil seleccionado:</label>
+          </p>
+          <p id="perfil">Nombre: {{ perros[linea][1] }}  </p>
+          <p id="perfil">Sexo: {{ perros[linea][2] }}  </p>
+          <p id="perfil">Edad: {{ perros[linea][3] }}  </p>
+          <p id="perfil">Raza: {{ perros[linea][4] }}  </p>
+          <p id="perfil">Tamaño: {{ perros[linea][5] }}  </p>
+          <p id="perfil">Descripción: {{ perros[linea][6] }}  </p> <br/>
+          <div>
+            <button id="botonAdmin1" onclick="ocultarModal('{{ perros[linea][1] }}')" type="reset">Cerrar</button>
+            <button id="botonAdmin1" onclick="redirigir('{{ perros[linea][1] }} ')" type="button" class="btn btn-primary">Adoptar</button>
+          </div>
+        </form>
+      </dialog>
+      <!-- Fin Modal -->
+      {% endfor %}
+    </div>
+  </div>  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+{% endblock content %}
+</body>

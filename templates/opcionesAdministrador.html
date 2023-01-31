@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="borrarForm"> 
+    <h1>OPCIONES ADMINISTRADOR</h1>
+    
+    <button type="button" class="botonAdmin"  onclick="redirigirAdminBorrar()"> Eliminar Perfil </button>
+    <br>
+  
+      
+    <button type="button" class="botonAdmin" onclick="redirigirAdminCargar()" style="margin-top: 8px;"> Agregar Perfil </button>
+    <br>
+
+  
+  <button type="button" class="botonAdmin" onclick="redirigirAdminModificar()" style="margin-top: 8px;"> Modificar Perfil </button> 
+    
+  
+  
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+</div>
+{% endblock content %}

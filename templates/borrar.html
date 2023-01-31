@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="formEliminar"> 
+    <h1>ELIMINAR PERFILES</h1>
+  <div class= "rectangulosEliminacion">
+    <div class ="rectanguloEliminarGatos">
+        <form action="{{url_for('opcionesBorrarGato')}}" method="POST">
+          <p> {{ mensajeG }}</p>
+          <label for="nombre"> Ingrese el nombre del gato que desea eliminar: </label>
+          <input type="text" id="nombre" name="nombreGato"style="
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-bottom-style: ridge;
+"/><br>
+    
+          <button type="submit" class="botonAdmin" onclick="borrarPerfilGato()"> BUSCAR</button>
+      
+        </form>
+    
+      {% for linea in range (largo) %} 
+      <div id="{{ gatos[linea] }}">
+        <h2 class="nombreMascota" style="text-align: center "> {{ gatos[linea] }} </h2>
+      <img id="animal" class="imagenesAnimales"  alt="{{ gatos[linea][1] }} " src = "{{ imagenGatos[linea][1:] }}" onclick="eliminar('{{ gatos[linea] }}', 'gato')"> 
+      </div>
+      
+      {% endfor %}
+    
+    </div>
+    
+    
+    
+    <div class ="rectanguloEliminarPerros">
+      <br/>
+        <form action="{{url_for('opcionesBorrarPerro')}}" method="POST">
+           <p> {{ mensajeP }}</p>
+          <label for="nombre"> Ingrese el nombre del perro que desea eliminar: </label>
+          <input type="text" id="nombre" name="nombrePerro"style="
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-bottom-style: ridge;
+"/><br>
+      
+          
+          <button type="submit" class="botonAdmin" onclick="borrarPerfilPerro()"> BUSCAR</button>
+    
+        </form>
+
+     {% for linea in range (largoP) %} 
+      <div id="{{ perros[linea] }}">
+      <h2 class="nombreMascota" style="text-align: center "> {{ perros[linea] }} </h2>
+      <img id="animal" class="imagenesAnimales"  alt="{{ perros[linea][1] }} " src = "{{ imagenPerro[linea][1:] }}" onclick="eliminar('{{ perros[linea] }}', 'perro')"> 
+      </div>
+      {% endfor %}
+    </div>   
+  </div>
+    <br/>
+    <button type="button" class="botonAdmin" onclick="pagAnterior()" style="
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;"> VOLVER </button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+</div>
+{% endblock content %}

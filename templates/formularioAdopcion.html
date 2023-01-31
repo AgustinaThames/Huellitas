@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "scroollFormu" > 
+  <div class="rectanguloAdopcion"> 
+    <div class= "adopcionInterior">
+        <p  class="adopcion" id="h1Adopcion"> Completa el formulario de adopción</p>
+        <form action="https://formsubmit.co/dfa0c19d44e7df61435e786f40379d32" method="POST" class="formAdopcion">
+<!--        <form action="{{url_for('formulario')}}" method="POST" class="formAdopcion"> -->
+      
+         <label for="nombre">Nombre:</label>
+                      <input required type="text" name= "nombre" class="form-control" id="nombre" required="obligatorio" placeholder="Ejemplo: Carlos">
+                        
+                      <label for="apellido">Apellido:</label>
+                      <input required type="text" name= "apellido" class="form-control" id="apellido" required="obligatorio" placeholder="Ejemplo: Martinez">
+                        
+                      <label for="dni">DNI:</label>
+                      <input required type="text" name= "dni" class="form-control" id="dni" required="obligatorio" placeholder="Ejemplo: 23668150">  
+                      <label for="mail">Mail:</label>
+                      <input required type="email" name= "mail" class="form-control" id="mail" required="obligatorio" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ejemplo: carlosmartinez@gmail.com">
+                        
+                      <label for="telefono">Teléfono:</label>
+                      <input required type="tel" name= "telefono" class="form-control" pattern="[+]+[54 9 11]+[0-9]{8}" id="telefono" placeholder="Ejemplo: +5491157692234">
+                        
+                      <label for="direccion">Dirección:</label>
+                      <input required type="text" name= "direccion" class="form-control" id="direccion" required="obligatorio" placeholder="Ejemplo: Avenida Rivadavia 5800">
+                        
+                      <label for="hogar">Tipo de casa:</label>
+                      <input required type="text" name= "hogar" class="form-control" id="hogar" required="obligatorio" placeholder="Ejemplo: Departamento">
+      
+                      <label for="otrasMascotas">Otras Mascotas:</label>
+                      <input required type="text" name= "mascotas" class="form-control" id="mascotas" required="obligatorio" placeholder="Ejemplo: Dos perros machos">
+      
+                      <label for="convivientes">Convivientes:</label>
+                      <input required type="text" name= "convivientes" class="form-control" id="convivientes" required="obligatorio" placeholder="Ejemplo: Dos hijas y esposo"> <br/> <br/> 
+          
+          <button type="submit" id="send-signup" class= "botonAdmin"value="Enviar Formulario" onclick="formulario()">Enviar Formulario </button>
+
+        <input type="hidden" name="_next" value="https://grupo7-proyectofinal.agustinathames.repl.co/">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+          
+        </form>
+        
+    </div>
+  </div>
+</div>   
+{% endblock content %}

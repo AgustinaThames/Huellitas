@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+/*font-family: 'Pathway Gothic One', sans-serif;*/
+
+body {
+  /*background-color: #Ffeee3; */
+  margin:0px;
+  width:100vw;
+  height: 100vh;
+}
+/* INICIO */
+.fondoPerro {
+  background-image: url('img/perro.png');
+  background-size: cover;
+  width:100vw;
+  height:91vh;
+}
+
+/* MISIÓN */
+.container2{
+  background: #Ffeee3;
+}
+
+h2{
+  color: #DB9D78;
+  font-family: 'Open Sans', sans-serif;;
+  font-size: 38px;
+  margin-top: 3%;
+  margin-left: -1%;
+  margin-bottom: 1%
+}
+.rectangulo{
+  width: 100%;
+  text-align: center;
+  height: 15vh;
+}
+
+.rectangulo2{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top:4%;
+  column-count:3;
+  column-gap:9%;
+  colum-row: 10px;
+  list-style: none;
+}
+}
+.rectangulo2 img{
+  text-align: center;
+  display: flex;
+  column-count:3;
+  column-gap:20px;
+  colum-row: 10px;
+  list-style: none;
+}
+.cruzTexto{
+  color: #DB9D78;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;;
+}
+.imgMision{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5%;
+}
+/* ADOPTA ANIMALITOS*/
+.imagenesAnimales{
+  width: 15vw;
+  height: 39vh;
+  border-radius: 17px;
+  border: 10px solid white;
+  cursor: pointer;
+
+}
+
+.tablaAnimalitos{
+    display: grid;
+    width: 95%;
+    margin: 5%;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 4rem;
+  /*display: grid;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  row-gap: 17rem;
+    /* grid-gap: 10rem; *//*
+  column-gap: 7rem;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 150px 150px;*/
+  
+  
+}
+.cuadradoAnimalito{
+    background-color: white;
+    width: 17vw;
+    border-radius: 17px;
+    border: 10px solid white;
+    align-items: center;
+    box-shadow: 3px 2px 2px grey;
+}
+.nombreMascota{
+  text-aling:center;
+}
+
+.scroollAnimalitos{
+  height: calc(100vh - 40px - 32px);
+  overflow-y:visible;
+  overflow-x:hidden;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NAV */
+refugioID{
+  font-family: 'Open Sans', sans-serif;
+  color: #fab68e ;
+  font-size: 20px;
+}
+.menu{
+  z-index: -3;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barraNav{
+  list-style-type: none;
+  background-color: #d886568;
+  border:2px;
+  width:100%;
+}
+header{
+  background-color: #DB9D78;
+  width: 100vw;
+  height: 40px;
+  margin: 0px;
+}
+.logo{
+  z-index: 3;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  margin: 0px;   
+}
+.nombreRefugio{
+  z-index: 3;
+  position: absolute;
+  top: -5px;
+  right: 60px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffeee4 ;
+  font-size: 30px;}   
+
+.logo img{
+  height: 40px
+  
+}
+.links .link {
+    display: inline-block;
+}
+
+.links .link a {
+    text-decoration: none;
+    color: #fab68e;
+    font-size: 20px;
+    margin: 0.5px;
+    letter-spacing: 2px;
+    transition: .3s;
+    padding: 10px;
+}
+
+.links .link {
+    color: #d886568;
+    margin: 10px 30px;
+    font-size: 0.5rem;
+    background-image: linear-gradient(90deg, #d88656, #db9d78, #fab68d);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.links .link:hover {
+    background-size: 100% 2px;
+}
+
+
+.toggle {
+    color:  white;
+    margin-right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s;
+    rotate: 90deg;
+    z-index: 7;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+@media screen{
+    .toggle {
+        display: inline-block;
+    }
+
+    .links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: #ffeee4;
+        text-align: left;
+        overflow: hidden;
+        height: calc(100vh - 40px - 32px);
+        width: 300px;
+        z-index: 5;
+        transition: all 0.5s;
+        box-shadow: 2.5px 2.5px 2.5px grey;
+    }
+
+    .links.inactive {
+       transform: translate(0, -100vh);
+    }
+  ul{
+    list-style-type: none;
+  }
+
+  .cajaContenido{
+    width:100vw;
+    height: calc(100vh - 40px - 32px);
+    background: #Ffeee3;
+  }
+}
+
+footer{
+  background-color:grey;
+  position:bottom;
+  width:100vw;
+  height:32px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: #fab68e;
+}
+h4{
+  color: #fff1e4;
+  font-size: 20px;
+  margin: 0%;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* PROBANDO PERFILES*/
+
+input::file-selector-button {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #FFEEE4;
+    padding: 0.5em;
+    border: thin solid #D88656;
+    background-color: #D88656;
+   
+}
+.checkboxs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.checkBoxAnimal1{
+  height: 20px;
+  width: 20px;
+  margin-right:5px;
+}
+
+.checkBoxAnimal2{
+  height: 20px;
+  width: 20px;
+  margin-right:5px;
+}
+.label1{
+  padding:0;
+}
+
+.label2{
+  padding:0;
+}
+
+.botonSelecArchivos{
+  text-align: center;
+  background: #FFEEE4;
+  border: #FFEEE4;
+  color: #D88656;
+  font-family: 'Pathway Gothic One', sans-serif;
+  margin-top: 2px;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 350px;
+  height: 35px;
+  border-bottom-style: ridge;
+}
+/* FORMULARIO ADOPCIÓN*/
+
+.rectanguloAdopcion{
+  /*height: calc(100% - 20px);
+  padding: 10px;
+  width: calc(100vw - 20px);*/
+  height: calc(100% );
+  padding: 10px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.adopcionInterior{
+  background-color: #FFFFFF;
+  width: 30vw;
+  border-radius: 12px;
+  text-align: center;
+  /*padding-top: 20px;
+  padding-bottom: 20PX;*/
+  padding:20px;
+  display: inline-block;
+  border-bottom-style: ridge;
+  border-right-style: inset;
+  
+}
+
+.formAdopcion{
+  text-align: center;
+  padding: 0;
+}
+
+label 
+{
+  display: block;
+  color: #D88656;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+}
+
+input{
+  background-color: #FFEEE4;
+  width: 350px;
+  height: 35px;
+  border-style: solid;
+  border: #FFEEE4;
+  border-width: 2px;
+  color: #D88656;
+  margin-top: 0.3%;
+  border-radius: 10px;
+  font-size: 16px;
+  border-bottom-style: ridge;
+}
+
+.botonAdmin{
+    text-align: center;
+    background: #D88656;
+    border: #D88656;
+    color: #FFEEE4;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin-top: 2px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 180px;
+}
+#botonAdmin1{
+    text-align: center;
+    background: #D88656;
+    border: #D88656;
+    color: #FFEEE4;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin-top: 2px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 80px;
+}
+
+
+.button:hover {
+  background: #ffc29e;
+}
+.adopcion{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #DB9D78;
+  text-align: center;
+  padding: 0;
+}
+h1{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #DB9D78;
+  text-align: center;
+  padding-top: 2%;
+  font-size: 45px;
+  margin-top:0px;
+}
+p{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #c1550d;
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+#perfil{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #DB9D78;
+  text-align: left;
+  font-size: 19px;
+  
+  
+}
+.formPerfil{
+  position: absolute;
+  background-color: #ffff;
+  background-opacity:
+  border-radius: 12px;
+  border:  #ffff;
+  border-radius: 7%;
+  min-width: 22%;
+  max-width: 40%;
+}
+#h1Adopcion{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #DB9D78;
+  text-align: center;
+  padding: 0;
+  font-size: 30px;
+  margin-top:2%;
+}
+.scroollFormu{
+ height: 100%;
+}
+
+/*.scroollFormu{
+  overflow-x: hidden;
+  overflow-y: visible;
+  height: calc(100vh -40px -32px);
+} */
+
+/* FORMULARIO REFUGIO*/
+#admin{
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #DB9D78;
+  text-align: center;
+  padding: 0;
+  font-size: 30px;
+  margin-top:0%;
+  padding-top:2%;
+}
+
+.formAdministrador{
+  text-align: center;
+  height: 70%;
+  padding: 0;
+}
+
+.rectanguloRefugio{
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width:30vw;
+  /*height: calc( 55vh - 32px - 40px);*/
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.botonRefugio{
+  text-align: center;
+  background: #D88656;
+  border: #D88656;
+  color: #FFEEE4;
+  font-family: 'Pathway Gothic One', sans-serif;
+  margin-top: 2%;
+  width: 30vh; 
+  height: 30px; 
+  border-radius: 10px;
+}
+
+h3{
+  display: block;
+  color: #DB9D78;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  font-size: 17px;
+  padding: 0px;
+}
+
+
+input[type="checkbox" i] {
+  color: black;
+}
+/* FORMULARIO REFUGIO*/
+.borrarForm{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px
+}
+
+/*FORMULARIO DE ELIMINACION  DE PERFILES*/
+
+.formEliminar{
+    position: absolute;
+    background-color: #ffff;
+    border-radius: 12px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height:405px;
+    max-height: calc(100vh - 81px - 32px);
+    overflow-y: visible;
+    overflow-x: hidden;
+    left:14%;
+    right:14%;
+  /*position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffff;
+  border-radius: 12px;*/
+}
+
+.rectangulosEliminacion{
+  display:flex
+}
+.rectanguloEliminarGatos{
+  background-color: #ffd8bd;
+    /* width: 30vw; */
+    border-radius: 12px;
+    text-align: center;
+    padding-top: 20px;
+    PADDING-BOTTOM: 20PX;
+    padding-left:40px;
+    padding-right: 40px;
+    display: inline-block;    
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+.rectanguloEliminarPerros{
+  background-color:#ffd8bd;
+    /* width: 30vw; */
+    border-radius: 12px;
+    text-align: center;
+   /* padding-top: 20px;*/
+    padding-left:40px;
+    padding-right: 40px;
+    PADDING-BOTTOM: 20PX;
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+.bluerear{
+  filter:blur(7px);
+  height: 100%;
+  width: 100%;
+}
+
+.btn{
+  padding:0px;
+  vertical-align: baseline;
+}

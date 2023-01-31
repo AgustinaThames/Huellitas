@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<body>
+   {% block content %}
+    <div class="fondoPerro">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" style="
+    width: 100vw;
+   height: calc(100vh - 40px - 32px);
+">
+            <div class="carousel-item active">
+              <img img src="{{ url_for('static', filename='img/fondo.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img img src="{{ url_for('static', filename='img/fondo4.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img img src="{{ url_for('static', filename='img/fondo2.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img img src="{{ url_for('static', filename='img/fondo3.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div > 
+  {% endblock %}
+</body>
+  

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+<body>
+  {% block content %}
+  <div class="rectanguloAdopcion"> 
+    <div class= "adopcionInterior">
+  
+      <h1 id="cargar">Cargar perfiles</h1>
+    
+      <form action="{{url_for('cargarPerfiles')}}" method="POST" enctype="multipart/form-data">
+    
+        <p>{{mensaje}}</p>
+        <p>{{mensaje2}}</p>
+        <h3> Ponga una mascota en adopción</h3> 
+        
+        <label for="name">Ingrese el nombre: </label>
+        <input required type="text" id="nombre" name="nombre" /><br>
+        <label for="tipo">Elija la opción que corresponda: </label><br>
+        <div class="checkboxs">
+
+        <input class= "checkBoxAnimal1" type="checkbox" id="gato" name="animal" value='gato' onclick="deseleccionar('perro')"/><label class="label1" for="gato" style="
+    margin-right: 50px;
+">Gato </label>
+        <input class= "checkBoxAnimal2" type="checkbox" id="perro" name="animal" value='perro' onclick="deseleccionar('gato')"/> <label class="label2"for="perro">Perro </label> 
+        </div>
+        <br>
+        <label for="sexo">Ingrese el sexo: </label> 
+        <input required type="text" id="sexo" name="sexo" /><br>
+    
+        <label for="edad">Ingrese la edad: </label> 
+        <input required type="text" id="edad" name="edad" /><br>
+        
+        <label for="raza">Ingrese la raza: </label> 
+        <input required type="text" id="raza" name="raza" /><br>
+    
+        <label for="tamaño">Ingrese el tamaño: </label> 
+        <input required type="text" id="tamaño" name="tamaño" /><br>
+    
+        <label for="información"> Ingrese una breve descripción de la mascota: </label> 
+        <input required type="text" id="informacion" name="informacion"/><br>
+    
+        
+        <input id="selecArchivo" required type="file" name="imagen" accept="image/png,image/jpeg,image/jpg" style="display:none" onchange="detectarImagen()"><br>
+        <button type="button" class="botonSelecArchivos">
+          <label for="selecArchivo" id="selecArchivoLabel"> Adjunte una imagen </label> 
+        </button>
+        <br>
+        <input type="submit" class = "botonAdmin" id="send-signup" value="Enviar" style ="margin-top: 6%;">
+      </form>
+    
+      <br/>
+      <button type="button" class="botonAdmin" onclick="pagAnterior()"> Volver</button>
+    </div>
+  </div>
+{% endblock content %} 
+</body>

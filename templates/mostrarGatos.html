@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+<body>
+  {% block content %}
+  <div class="scroollAnimalitos">
+    <div class="fondoBlur">
+      <h1> <b>Conoce a nuestros Felinos! </b></h1>
+      <div class="tablaAnimalitos">
+        {% for linea in range (largo) %} 
+          <form action="{{url_for('mostrarGatos')}}" method="POST">
+            
+            <div class= "cuadradoAnimalito"> 
+              <img id="animal" class="imagenesAnimales"  alt="{{ gatos[linea][1] }} "onclick="probarModal('{{ gatos[linea][1] }}');  seleccionar('{{ imagenGatos[linea] }}')" src = "{{ imagenGatos[linea][1:] }}"> 
+              <h2 class="nombreMascota" style="
+      text-align: center "> {{ gatos[linea][1] }} </h2>
+            </div>
+  <!--           <input type="hidden" name="gatoSeleccionado" value="{{ imagenGatos[linea][1:] }}" -->
+          </form >
+        
+          <!-- Modal -->
+          <!--<div class="fondoBlur"> -->
+            <dialog class= "formPerfil"id="modal{{ gatos[linea][1] }}">
+              <form  method="dialog">
+                <p>
+                  <label for="favAnimal">Perfil seleccionado:</label>
+                </p>
+                <p id="perfil">Nombre: {{ gatos[linea][1] }}  </p>
+                <p id="perfil">Sexo: {{ gatos[linea][2] }}  </p>
+                <p id="perfil">Edad: {{ gatos[linea][3] }}  </p>
+                <p id="perfil">Raza: {{ gatos[linea][4] }}  </p>
+                <p id="perfil">Tamaño: {{ gatos[linea][5] }}  </p>
+                <p id="perfil">Descripción: {{ gatos[linea][6] }}  </p> <br/>
+                <div>
+                  <button id="botonAdmin1" onclick="ocultarModal('{{ gatos[linea][1] }}')" type="reset">Cerrar</button>
+                  <button id="botonAdmin1" onclick="redirigir('{{ gatos[linea][1] }}')" type="button" class="btn btn-primary">Adoptar</button>
+              </form>
+              </div >
+            </dialog>
+          
+            {% endfor %}
+        </form>
+      </div>
+    </div>
+    <!-- Fin Modal -->
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+{% endblock content %}
+</body>

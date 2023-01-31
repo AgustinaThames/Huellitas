@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class= "rectanguloRefugio"> 
+  <p  class="administrador" id="admin"> ADMINISTRADOR</p>
+  <form  action="{{url_for('refugio')}}" class= "formAdministrador" method="POST" id="formularioRefugio">
+    <p>{{mensaje}}</p>
+    <label id= "usuario" for="usuario"> Usuario: </label>
+    <input required type="text" id="usuario" name="usuario" placeholder="Nombre del refugio" required="obligatorio"/><br>
+    
+    <label id= "contra" for="password"> Contraseña: </label> 
+    <input required type="password" id="password" name="password" placeholder="********" required="obligatorio"/> <br> <br>
+    
+    <button type='button' id="send-signup" class= "botonRefugio"onclick="formularioRefugio()"style="
+    font-size: 20px;
+">Ingresar</button>
+
+  </form>
+</div>
+{% endblock content %}
